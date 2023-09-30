@@ -154,3 +154,34 @@ public class build_AVL_Trees {
  * 10 30
  * 25
  */
+/*The provided Java code implements an AVL Tree (Adelson-Velsky and Landis Tree), a self-balancing binary search tree. AVL Trees ensure that the tree remains balanced after insertions and deletions, which helps maintain efficient search and retrieval operations. Here's a description of how the code works:
+
+Node Class: The code defines an inner class called Node, which represents a node in the AVL tree. Each node has an integer value (data), a height (height), and references to its left and right children (left and right). The height of a node is the length of the longest path from that node to a leaf.
+
+Static Variables: The code includes a static variable root to represent the root of the AVL tree.
+
+Height and Balance Factor Functions:
+
+height(Node root): This function calculates and returns the height of a given node. If the node is null, it returns 0.
+getBalance(Node root): This function calculates and returns the balance factor of a node. The balance factor is the difference between the height of the left subtree and the height of the right subtree.
+Rotation Functions:
+
+rightRotate(Node y): This function performs a right rotation on a given node y. It is used to balance the tree when the left subtree is taller than the right subtree.
+leftRotate(Node x): This function performs a left rotation on a given node x. It is used to balance the tree when the right subtree is taller than the left subtree.
+Insertion Function (insert):
+
+The insert function recursively inserts a new node with a given key into the AVL tree.
+It calculates and updates the height of each node during the insertion process.
+It also checks the balance factor of each node and performs rotations as needed to maintain AVL tree properties.
+Level Order Traversal (levelOrder):
+
+The levelOrder function performs a level-order traversal of the AVL tree and prints the nodes at each level.
+It uses a queue to traverse the tree level by level and prints the nodes accordingly.
+Main Function:
+
+In the main function, a sample AVL tree is created by inserting the values 10, 20, 30, 40, 50, and 25 into the tree.
+The levelOrder function is then called to print the tree in level order.
+Output:
+
+The expected output, as indicated in the code comments, is a level-order traversal of the AVL tree. The tree is balanced, and the output shows the nodes arranged by their levels.
+Overall, this code demonstrates the construction and insertion into an AVL tree, with rotations to maintain balance when necessary, and then displays the tree in a level-order fashion to showcase its structure.*/
