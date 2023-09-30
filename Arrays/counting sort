@@ -1,0 +1,76 @@
+/*
+ *       Counting Sort
+ */
+
+public class CountingSort {
+    
+    public static void sortArray(int array[]) {
+        int largest=Integer.MIN_VALUE;
+        for(int i=0; i<array.length; i++){
+            largest=Math.max(array[i],largest);
+        }
+        int count[] = new int[largest+1];
+        for(int i=0; i<array.length; i++){
+            count[array[i]]++;
+        }
+        // sorting
+        int j=0;
+        for(int i=0; i<count.length; i++){
+            while(count[i]>0){
+                array[j]=i;
+                j++;
+                count[i]--;
+            }
+        }
+
+    }
+
+    public static void main(String[] args) {
+        int array[]={1,4,1,3,2,4,3,7};
+        sortArray(array);
+        
+        for(int i=0; i<array.length; i++){
+            System.out.print(array[i] + " ");
+        }
+    }
+}
+
+/*
+ *   Output:
+ *   1 1 2 3 3 4 4 7
+ */
+*/Counting Sort Algorithm:
+
+The program uses a sortArray method to perform the Counting Sort algorithm on an array of integers.
+Determining the Range:
+
+Before sorting, the program determines the largest integer in the input array by iterating through the array. The largest variable is used to keep track of this value.
+Count Array:
+
+A count array is created with a size equal to the largest integer found in the input array plus one (largest+1). This count array is used to store the count of each integer in the input array.
+Counting Frequencies:
+
+The program then iterates through the input array again and increments the count of each integer in the count array. This step counts how many times each integer appears in the input array.
+Sorting the Array:
+
+A pointer j is used to keep track of the current position in the input array. The program then iterates through the count array. For each value i encountered, it adds i to the input array count[i] times. This step effectively sorts the input array based on the frequencies of integers.
+Main Method:
+
+In the main method, an array of integers array is initialized with values.
+Sorting the Array:
+
+The sortArray method is called to sort the array using the Counting Sort algorithm.
+Printing the Sorted Array:
+
+After sorting, the main method prints the sorted elements of the array using a loop.
+Output:
+The program correctly demonstrates the Counting Sort algorithm and sorts the array in ascending order based on the frequencies of integers. The sorted array is printed as follows:
+
+Copy code
+1 1 2 3 3 4 4 7
+Counting Sort is especially efficient when the range of input values is small compared to the number of elements to be sorted. It is a stable sorting algorithm, which means that equal elements maintain their relative order in the sorted output.*/
+
+
+
+
+
