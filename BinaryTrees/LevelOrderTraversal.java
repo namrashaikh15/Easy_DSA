@@ -1,3 +1,4 @@
+
 /*
  *    @Level Order Treversal
  */
@@ -77,3 +78,15 @@ public class LevelOrderTraversal {
  * 2 3
  * 4 5 6
  */
+*/Node Class: This class defines the structure of a binary tree node. Each node has an integer data value, a left child, and a right child.
+
+BinaryTree Class: This class contains methods related to binary trees.
+
+buildTree Function: This function is used to construct a binary tree from an input array of integers. It follows a recursive approach. It reads the next element from the array and, if it is not -1 (indicating a null node), creates a new node with that value and recursively calls itself to create the left and right subtrees.
+
+levelOrder Function: This function performs a level-order traversal of the binary tree using a queue. It starts with the root node, adds it to the queue, and processes nodes level by level. It prints each node's data as it is removed from the queue. To mark the end of each level, it inserts a null into the queue, and when a null is encountered, a new line is printed to separate levels.
+
+main Function: The main method initializes an array of integers representing a binary tree structure. It then creates an instance of the BinaryTree class, constructs the binary tree using the buildTree function, and finally calls the levelOrder function to perform a level-order traversal and print the nodes in level-order.
+
+Output:
+The program demonstrates the level-order traversal of a binary tree. It prints the nodes of the binary tree in a format where each level of nodes is on a separate line, as shown in the provided output.
